@@ -8,7 +8,7 @@ function title() {
 	document.title = 'Wait... ' + numberToUrl;
 	numberToUrl = numberToUrl - 1
 	if (numberToUrl < 0) {
-		nexturl();
+		document.location.href = document.location.href + "test";
 	}
 }
 
