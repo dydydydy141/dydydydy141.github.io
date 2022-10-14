@@ -8,7 +8,7 @@ function title() {
 	document.title = 'Wait... ' + numberToUrl;
 	numberToUrl = numberToUrl - 1
 	if (numberToUrl < 0) {
-		document.location.href ="file:///C:/Users/Артемий/Desktop/KospoStudioSite/index.html";
+		nexturl();
 	}
 }
 
