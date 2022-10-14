@@ -1,7 +1,7 @@
 var numberToUrl = 3;
 
 function nexturl() {
-	document.location.href = document.location.href + "/test";
+	document.location.href = document.location.href + "test";
 }
 
 function title() {
