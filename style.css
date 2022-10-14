@@ -10,6 +10,8 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  font-size: 30px;
+  font-family: Cursive;
 }
 
 .bouncer {
@@ -20,13 +22,18 @@ body {
   height: 100px;
 }
 
+.loading div {
+   margin: 0 auto;
+}
+
 .bouncer div {
   width: 20px;
+  opacity: 0%;
   height: 20px;
   background-color: #0077ff;
   border-radius: 50%;
-  animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
-  /* use https://cubic-bezier.com/ to customize the curve */
+  animation: show 1s infinite ease alternate;
+  /* use https://cubic-bezier.com/ to customize the curve cubic-bezier(0.19, 0.57, 0.3, 0.98) */
 }
 
 .bouncer div:nth-child(2) {
@@ -52,3 +59,27 @@ body {
     transform: translateY(-100px);
   }
 }
+
+@keyframes show {
+  from {
+    opacity: 0.1;
+    height: 10px;
+  }
+  35% {
+    opacity: 0.5;
+    height: 23px;
+  }
+  50% {
+    opacity: 1;
+    height: 30px;
+  }
+  65% {
+    opacity: 0.5;
+    height: 23px;
+  }
+  to {
+    opacity: 0.1;
+    height: 10px;
+  }
+}
+
