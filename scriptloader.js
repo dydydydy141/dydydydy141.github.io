@@ -11,5 +11,5 @@ function platformerRegister() {
 
     platformerWin.document.title = "Страшно очень страшно...";
 
-    platformerWin.document.location.href = "file:///C:/Users/Виталий/Desktop/KospoApps/Д.З.%20По%20комп%20графике/Сайт%20%231/game.html"; 
+    platformerWin.document.location.href = "https://dydydydy141.github.io/game.html"; 
 }
