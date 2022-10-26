@@ -82,7 +82,7 @@ let movementX = 0;
 let cameraX = 0;
 let cameraY = 0;
 
-setInterval(render, 1000 / 60)
+setInterval(render, 1000 / 60);
 
 function render() {
 
@@ -152,14 +152,14 @@ function render() {
 
     let onGround2 = false;
 
-    if (playerX < 60 + 15 * 75 && playerX > 60) {onGround2 = true}
+    if (playerX < 60 + 15 * 75 && playerX > 60) {onGround2 = true;}
 
     if (playerY > 470 && playerY < 520 && onGround2) {
         playerY = 470;
         playerGrav = 0;
         onGround = true;
     } else {
-        onGround = jetpack
+        onGround = jetpack;
     }
 }
 
@@ -212,7 +212,7 @@ function AnimationPeti() {
     }
 }
 
-setInterval(AnimationPeti, 1000 / 8)
+setInterval(AnimationPeti, 1000 / 8);
 
 function keydown(k)
 {
@@ -275,5 +275,5 @@ function keyup(k) {
     }
 }
 
-document.addEventListener("keydown",keydown)
-document.addEventListener("keyup",keyup)
+document.addEventListener("keydown",keydown);
+document.addEventListener("keyup",keyup);
