@@ -13,3 +13,4 @@ function platformerRegister() {
 
     platformerWin.document.location.href = "https://dydydydy141.github.io/game.html"; 
 }
+
