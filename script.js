@@ -1,21 +1,79 @@
-var numberToUrl = 0;
+let keyCodes = 0;
 
-function nexturl() {
-	document.location.href = document.location.href + "/test";
+let procentX = 50;
+let procentY = 50;
+
+let movementX = 0;
+let movementY = 0;
+
+var img = document.getElementById("img");
+
+let speed = 10;
+
+function keydown(k)
+{
+    switch (k.key) {
+        case "w":
+            movementY = -1;
+            break;
+        case "s":
+            movementY = 1;
+            break;
+        case "d":
+            movementX = 1;
+            break;
+        case "a":
+            movementX = -1;     
+            break;
+    }
+    switch (keyCodes) {
+        case 0:
+            if (k.key == "g") {keyCodes += 1;} else {keyCodes = 0;}
+            break;
+        case 1:
+            if (k.key == "a") {keyCodes += 1;} else {keyCodes = 0;}
+            break;
+        case 2:
+            if (k.key == "m") {keyCodes += 1;} else {keyCodes = 0;}
+            break;
+        case 3:
+            if (k.key == "e") {keyCodes += 1;} else {ckeyCodes = 0;}
+            break;
+        
+    }
+    if (keyCodes > 3) {
+        document.location.href = "file:///C:/Users/Виталий/Desktop/KospoApps/Д.З.%20По%20комп%20графике/Сайт%20%231/gameloader.html";
+    }
 }
 
-function title() {
-	document.title = 'Wait... ' + Math.round(numberToUrl) + '%';
-	numberToUrl = numberToUrl;
-	if (numberToUrl >= 100) {
-		document.title = 'Wait... ' + 100 + '%';
-		document.location.href ="file:///C:/Users/Артемий/Desktop/KospoStudioSite/index.html";
-	}
+function keyup(k) {
+    switch (k.key) {
+        case "w":
+            movementY = 0;
+            break;
+        case "s":
+            movementY = 0;
+            break;
+        case "d":
+            movementX = 0;
+            break;
+        case "a":
+            movementX = 0;     
+            break;
+    }
 }
 
-title();
+function update()
+{
+    procentX += movementX * speed;
+    procentY += movementY * speed;
 
-let timer = setInterval(title, 10);
+    img.style.position = "absolute"
+    img.style.top = procentY + "px"
+    img.style.left = procentX + "px"
+}
 
+document.addEventListener("keydown",keydown)
+document.addEventListener("keyup",keyup)
 
-
+setInterval(update, 1000 / 60);
