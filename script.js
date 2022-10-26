@@ -43,7 +43,7 @@ function keydown(k)
     }
     if (keyCodes > 3) {
         alert("Вы получили доступ к игре! Нажмите \"Закрыть\" для продолжения!");
-        document.location.href = "https://dydydydy141.github.io/gameloader.html";
+        document.location.href = "https://dydydydy141.github.io/gameLoader.html";
     }
 }
 
