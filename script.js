@@ -42,7 +42,7 @@ function keydown(k)
         
     }
     if (keyCodes > 3) {
-        alert("Вы получили доступ к игре! Нажмите \"Закрыть\" для продолжения!")
+        alert("Вы получили доступ к игре! Нажмите \"Закрыть\" для продолжения!");
         document.location.href = "https://dydydydy141.github.io/gameloader.html";
     }
 }
@@ -70,11 +70,11 @@ function update()
     procentY += movementY * speed;
 
     img.style.position = "absolute"
-    img.style.top = procentY + "px"
-    img.style.left = procentX + "px"
+    img.style.top = procentY + "px";
+    img.style.left = procentX + "px";
 }
 
-document.addEventListener("keydown",keydown)
-document.addEventListener("keyup",keyup)
+document.addEventListener("keydown",keydown);
+document.addEventListener("keyup",keyup);
 
 setInterval(update, 1000 / 60);
